@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class Leaderboard : MonoBehaviour
 {
     public GameObject scorePrefab;
+    public GameObject loadingPrefab;
     private int highScore;
     private string playerName;
 
@@ -32,6 +33,8 @@ public class Leaderboard : MonoBehaviour
 
     IEnumerator GetSetScores()
     {
+        GameObject loadingImage = Instantiate(loadingPrefab, Vector3.zero, Quaternion.identity);
+        loadingImage.transform.SetParent(transform, false);
         UnityWebRequest www = UnityWebRequest.Get(string.Format("http://dreamlo.com/lb/6JXzVytc8UqDuVxG0xdQ9A9cBVCoWzlUiPL34KgvbizA/add/{0}/{1}", playerName, highScore));
         yield return www.SendWebRequest();
 
@@ -63,6 +66,7 @@ public class Leaderboard : MonoBehaviour
                 SearchResult searchResult = result.ToObject<SearchResult>();
                 searchResults.Add(searchResult);
             }
+
 
             foreach (SearchResult result in searchResults)
             {

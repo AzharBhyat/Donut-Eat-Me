@@ -304,7 +304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 108.1, y: 189.4}
+  m_AnchoredPosition: {x: 108.1, y: 107}
   m_SizeDelta: {x: 267.84, y: 294.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56160632
@@ -487,6 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorePrefab: {fileID: 4145021144744498939, guid: 252a9db8294dcc4469d71f37210929c9, type: 3}
+  loadingPrefab: {fileID: 395226890077776230, guid: 2b45dba7def6456528d236c0d865f909, type: 3}
 --- !u!1 &191609180
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.44375002, y: 0.1985636}
   m_AnchorMax: {x: 0.9425, y: 0.29958096}
-  m_AnchoredPosition: {x: -15.360001, y: 0.7300415}
+  m_AnchoredPosition: {x: -15.360001, y: -41}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375571151
@@ -3494,7 +3495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 12.000007, y: -600.7}
+  m_AnchoredPosition: {x: 8, y: -503}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615401005
