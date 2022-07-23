@@ -34,7 +34,7 @@ public class Leaderboard : MonoBehaviour
     IEnumerator GetSetScores()
     {
         GameObject loadingImage = Instantiate(loadingPrefab, Vector3.zero, Quaternion.identity);
-        loadingImage.transform.SetParent(transform, false);
+        loadingImage.transform.SetParent(transform.parent, false);
         UnityWebRequest www = UnityWebRequest.Get(string.Format("http://dreamlo.com/lb/6JXzVytc8UqDuVxG0xdQ9A9cBVCoWzlUiPL34KgvbizA/add/{0}/{1}", playerName, highScore));
         yield return www.SendWebRequest();
 
@@ -70,6 +70,10 @@ public class Leaderboard : MonoBehaviour
 
             foreach (SearchResult result in searchResults)
             {
+                if (loadingImage)
+                {
+                    GameObject.Destroy(loadingImage);
+                }
                 var newScore = Instantiate(scorePrefab, Vector3.zero, Quaternion.identity);
                 newScore.transform.SetParent(transform, false);
                 newScore.GetComponent<Text>().text = result.name + ": " + result.score;
